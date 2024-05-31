@@ -1,4 +1,7 @@
 import {
+  TimesIcon
+} from "./chunk-557WHWBS.js";
+import {
   ButtonDirective,
   ButtonModule
 } from "./chunk-JSI3K33O.js";
@@ -6,9 +9,6 @@ import {
   Ripple,
   RippleModule
 } from "./chunk-V6T6GC5V.js";
-import {
-  TimesIcon
-} from "./chunk-557WHWBS.js";
 import "./chunk-CJI6EKTS.js";
 import {
   BaseIcon
