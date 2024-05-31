@@ -1,0 +1,54 @@
+<div class="card">
+    <p-button label="Add New Record" routerLink="/add" severity="success" class="btn_class" />
+    <hr>
+    <p-table [value]="products" [tableStyle]="{'min-width': '60rem'}">
+        <ng-template pTemplate="header">
+            <tr>
+                <th pSortableColumn="name" style="width:20%">
+                    Name <p-sortIcon field="name" />
+                </th>
+                <th pSortableColumn="company_name" style="width:20%">
+                    company_name <p-sortIcon field="company_name" />
+                </th>
+                <th pSortableColumn="mobile_no" style="width:20%">
+                    mobile_no <p-sortIcon field="mobile_no" />
+                </th>
+                <th pSortableColumn="email" style="width:20%">
+                    email <p-sortIcon field="email" />
+                </th>
+                <th pSortableColumn="credit_limit" style="width:20%">
+                    credit_limit <p-sortIcon field="credit_limit" />
+                </th>
+                <th style="width:100%">
+                    Action
+                </th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-product>
+            <tr>
+                <td>{{ product.name }}</td>
+                <td>{{ product.company_name}}</td>
+                <td>{{ product.mobile_no }}</td>
+                <td>{{ product.email }}</td>
+                <td>{{ product.credit_limit }}</td>
+                <td style="display: flex;">
+                    <p-button label="delete" (click)="deletePartyDetailsBYId()" severity="danger" class="btn_class" />
+                    <p-button label="edit" routerLink="/edit" [queryParams]="{ Id: product?.Id }" severity="warning"
+                    class="btn_class" />
+                </td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>
+
+<div class="card flex justify-content-center">
+    <p-toast />
+    <p-confirmDialog>
+        <ng-template pTemplate="message" let-message>
+            <div class="flex flex-column align-items-center w-full gap-3 border-bottom-1 surface-border">
+                <i class="pi pi-exclamation-circle text-6xl text-primary-500"></i>
+                <p>{{ message.message }}</p>
+            </div>
+        </ng-template>
+    </p-confirmDialog>
+</div>

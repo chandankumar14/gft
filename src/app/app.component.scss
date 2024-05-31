@@ -1,0 +1,23 @@
+mat-sidenav-container{
+    height: calc(100vh - 64px);
+}
+mat-sidenav-content{
+    background-color: #e9ecef;
+    transition: all 500ms ease-in-out;
+}
+mat-sidenav{
+    background-color: #ece9f0;
+    color: black;
+    transition: all 500ms ease-in-out;
+}
+mat-toolbar{
+    position: relative;
+    z-index: 1000;
+    box-shadow: 0px 2px 20px rgba(1, 41, 112, 0.1);
+    background-color: darkcyan;
+}
+.toolbar_btn{
+    border: none;
+    color: black;
+    background-color: darkcyan;
+}
