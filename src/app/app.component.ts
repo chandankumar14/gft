@@ -10,7 +10,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class AppComponent {
   title = 'GFT';
-  loggedId:boolean=true
+  loggedId:boolean=false
   loginForm!:FormGroup
   userName: string = "chandan"
   Password: string = "chandan@123"
