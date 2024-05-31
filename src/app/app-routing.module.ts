@@ -14,7 +14,7 @@ const routes: Routes = [
   {
     path: 'add', component: EditComponent
   },
-  { path: '', component: AppComponent },
+  { path: '', component: PartyListComponent },
   { path: '', redirectTo: '/', pathMatch: 'full' },
   { path: '**', redirectTo: '', pathMatch: 'full' }
 ];

@@ -2,6 +2,7 @@ import { Component,computed, signal } from '@angular/core';
 import { MENU_ITEM } from './model/side_menu';
 import { sideMenu } from './shared/side_menu';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -17,8 +18,7 @@ export class AppComponent {
   menuItem = signal<MENU_ITEM[]>(sideMenu)
   collapsed = signal(false)
   sideNaveWidth = computed(()=>this.collapsed()?'60px':'210px')
-  router: any;
-  constructor(){
+  constructor(private router: Router){
     this.loginForm = new FormGroup ({
       username:new FormControl('',Validators.required),
       password:new FormControl('',Validators.required)
